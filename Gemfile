@@ -49,3 +49,4 @@ end
 # Clear Heroku warnings
 gem 'rails_12factor'
 gem 'puma'
+
