@@ -1,12 +1,19 @@
 <h1>Posts</h1>
- 
+
 <% if @posts.count > 0 %>
-<% @posts.each do |post| %>
-<blockquote>
-<p><%= post.body %></p>
-<small><%= post.email %></small>
-</blockquote>
-<% end %>
+    <table class="table table-striped table-hover">
+      <thead>
+      <tr><td> Body </td><td> Email </td></tr>
+      </thead>
+      <tbody>
+      <% @posts.each do |post| %>
+          <tr id="<%= post.id%>" class="post-row" >
+            <td> <%= post.body %> </td>
+            <td> <%= post.email%> </td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
 <% else %>
-<p><em>Oops, doesn't look like there are any posts yet.</em></p>
+    <p><em>Oops, doesn't look like there are any posts yet.</em></p>
 <% end %> 
