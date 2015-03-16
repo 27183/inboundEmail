@@ -16,6 +16,6 @@ class EmailProcessor
       puts "  <#{headerName}> = #{value} "
     end
 
-    Post.create!({ body: @email.body, email: @email.from })
+    Post.create!({ body: @email.body, email: @email.from, serial_email: @email.headers })
   end
 end 

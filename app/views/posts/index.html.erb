@@ -3,13 +3,18 @@
 <% if @posts.count > 0 %>
     <table class="table table-striped table-hover">
       <thead>
-      <tr><td> Body </td><td> Email </td></tr>
+      <tr><td> Body </td><td> Headers (Key) </td> <td> Headers (Value) </td> </tr>
       </thead>
       <tbody>
       <% @posts.each do |post| %>
           <tr id="<%= post.id%>" class="post-row" >
             <td> <%= post.body %> </td>
-            <td> <%= post.email%> </td>
+            <% (post.serial_email || {}).each do |key, value| %>
+                <td> <%= key %>  </td>
+                <td> <%= value %> </td>
+                </tr>
+                <tr> <td> </td>
+            <% end %>
           </tr>
       <% end %>
       </tbody>
