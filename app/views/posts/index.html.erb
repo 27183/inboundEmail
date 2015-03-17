@@ -9,7 +9,7 @@
       <% @posts.each do |post| %>
           <tr id="<%= post.id%>" class="post-row" >
             <td> <%= post.body %> </td>
-            <% (post.serial_email || {}).each do |key, value| %>
+            <% (post.headers || {}).each do |key, value| %>
                 <td> <%= key %>  </td>
                 <td> <%= value %> </td>
                 </tr>

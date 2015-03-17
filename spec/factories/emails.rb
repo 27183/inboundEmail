@@ -5,6 +5,8 @@ FactoryGirl.define do
     from({ token: 'from_user', host: 'email.com', email: 'from_email@email.com', full: 'From User <from_user@email.com>', name: 'From User' })
     subject 'email subject'
     body 'Hello!'
+    raw_text 'Raw text'
+    raw_html 'Raw html'
     attachments {[]}
 
     trait :with_attachment do
