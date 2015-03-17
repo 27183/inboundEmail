@@ -56,3 +56,8 @@ gem 'puma'
 # Handle emails
 gem 'griddler'
 gem 'griddler-sendgrid'
+
+# Nicer tables
+gem 'therubyracer'
+gem 'less-rails'
+gem 'twitter-bootstrap-rails'
